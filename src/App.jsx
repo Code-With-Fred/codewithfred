@@ -2,6 +2,8 @@ import React from 'react'
 import Portfolio from './Component/Portfolio'
 import About from './Component/about'
 import Services from './Component/services'
+import ProjectSection from './Component/project'
+import Skills from './Component/skill'
 
 export const App = () => {
   return (
@@ -9,6 +11,8 @@ export const App = () => {
   <Portfolio/>
   <About/>
   <Services/>
+  <ProjectSection/>
+  <Skills/>
  </div>
   )
 }
