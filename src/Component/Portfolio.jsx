@@ -3,7 +3,7 @@ import "../../src/App.css";
 import me from "../../src/assets/IMG_E9079.JPG";
 import { motion } from "framer-motion";
 import Typewriter from "typewriter-effect";
-// import logo from "../../src/assets/logo.png";
+import logo from "../../src/assets/logo.jpg";
 
 const spring = {
   type: "spring",
@@ -51,13 +51,13 @@ const Portfolio = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4">
             {/* Logo */}
-            {/* <div className="flex items-center">
+            <div className="flex items-center">
               <img
                 src={logo}
                 alt="Logo"
-                className="h-10"
+                className="h-10 rounded-full"
               />
-            </div> */}
+            </div>
 
             {/* Desktop Menu */}
             <ul className="hidden md:flex justify-center gap-6 font-semibold text-lg text-black dark:text-gray-200">
