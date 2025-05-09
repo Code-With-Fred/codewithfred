@@ -1,0 +1,32 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+/* CSS for typing effect */
+.typewriter h1 {
+  overflow: hidden; /* Ensures the text is hidden while typing */
+  border-right: .15em solid orange; /* Adds a blinking cursor effect */
+  white-space: nowrap; /* Prevents text from wrapping */
+  margin: 0 auto;
+  letter-spacing: .15em;
+  animation: typing 3.5s steps(40) 1s forwards, blink 0.75s step-end infinite;
+}
+
+/* Typing animation */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* Blinking cursor effect */
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
