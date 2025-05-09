@@ -17,7 +17,8 @@
     "motion": "^12.10.3",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
-    "react-typing-effect": "^2.0.5"
+    "react-typing-effect": "^2.0.5",
+    "typewriter-effect": "^2.22.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.25.0",
