@@ -29,10 +29,10 @@ const Services = () => {
   ];
 
   return (
-    <section className="p-8 md:p-16 bg-gradient-to-b from-gray-900 to-black text-white">
+    <section className="p-8 md:p-16 bg-white dark:bg-black text-black dark:text-white transition-colors duration-500">
       <div className="max-w-6xl mx-auto text-center mb-12">
         <h2 className="text-4xl md:text-5xl font-bold mb-4">Services I Offer</h2>
-        <p className="text-lg text-gray-300">
+        <p className="text-lg text-gray-700 dark:text-gray-300">
           Fred Douglas' Craft: Where code meets art, and innovation takes flight.
         </p>
       </div>
@@ -66,7 +66,7 @@ const Services = () => {
                 </div>
 
                 {/* Back of Card */}
-                <div className="flip-back bg-slate-700 text-white rounded-xl shadow-lg p-6 flex flex-col justify-center items-center">
+                <div className="flip-back bg-gray-100 dark:bg-slate-700 text-black dark:text-white rounded-xl shadow-lg p-6 flex flex-col justify-center items-center">
                   <h3 className="text-xl font-bold mb-2">{service.title}</h3>
                   <p className="text-sm">{service.desc}</p>
                   <span className="mt-4">🔥 Let's build it</span>
