@@ -1,5 +1,5 @@
 import React from "react";
-import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaDocker, FaGitAlt } from "react-icons/fa";
+import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaBootstrap, FaGitAlt, FaSass, FaFigma, FaCss3 } from "react-icons/fa";
 import { FiDownload } from "react-icons/fi";
 
 const Skills = () => {
@@ -9,8 +9,9 @@ const Skills = () => {
     { icon: <FaJs />, title: "JavaScript" },
     { icon: <FaReact />, title: "React" },
     { icon: <FaNodeJs />, title: "Node.js" },
-    { icon: <FaDocker />, title: "Docker" },
+    { icon: <FaBootstrap />, title: "Bootstrap" },
     { icon: <FaGitAlt />, title: "Git" },
+    { icon: <FaSass />, title: "Tailwind" },
   ];
 
   return (
@@ -44,14 +45,26 @@ const Skills = () => {
             <FaNodeJs />
           </div>
           <div className="tool-card text-4xl">
-            <FaDocker />
+            <FaBootstrap />
+          </div>
+          <div className="tool-card text-4xl">
+            <FaSass />
+          </div>
+          <div className="tool-card text-4xl">
+            <FaHtml5 />
+          </div>
+          <div className="tool-card text-4xl">
+            <FaFigma />
+          </div>
+          <div className="tool-card text-4xl">
+            <FaCss3 />
           </div>
         </div>
       </div>
 
       {/* Download Resume Button */}
-      <div className="text-center mt-16">
-        <a href="/path/to/your/resume.pdf" download>
+      <div className="text-center justify-center flex mt-10">
+        <a href="file:///C:/Users/Hp/Documents/RESUME%20FULLSTACK%20DEVELOPER.pdf" download>
           <button className="px-8 py-3 bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-bold rounded-full transform transition-all duration-300 hover:scale-105 flex items-center justify-center">
             <FiDownload className="mr-2" />
             Download Resume

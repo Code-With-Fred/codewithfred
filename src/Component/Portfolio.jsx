@@ -112,7 +112,8 @@ const Portfolio = () => {
                   "I'm Fred Douglas.",
                   "Full Stack Developer.",
                   "Technical Writer.",
-                  "Lifelong Learner."
+                  "Lifelong Learner.",
+                  "Tech Instructor."
                 ],
                 autoStart: true,
                 loop: true,
@@ -127,6 +128,8 @@ const Portfolio = () => {
           <button className="bg-blue-800 hover:bg-blue-700 text-white rounded-2xl px-6 py-3 transition duration-300">
             Explore my projects
           </button>
+
+          
         </div>
 
         <div>

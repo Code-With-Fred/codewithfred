@@ -6,7 +6,7 @@ const projects = [
   {
     title: "Cryptop tracker",
     desc: "A React-based viewer to fetch and display the current price of cryptocurrencies.",
-    tech: ["React", "Tailwind", "etc"],
+    tech: ["React", "Tailwind"],
     live: "#",
     code: "#"
   },
@@ -22,6 +22,27 @@ const projects = [
     desc: "A simple weather checker using API integration.",
     tech: ["HTML", "CSS", "JavaScript", "OpenWeather API"],
     live: "#",
+    code: "#"
+  },
+  {
+    title: "Fintech App",
+    desc: "A simple transactional website.",
+    tech: ["react", "tailwind css", "node js"],
+    live: "#",
+    code: "#"
+  },
+  {
+    title: "Fintech App",
+    desc: "A simple transactional website.",
+    tech: ["react", "tailwind css", "node js"],
+    live: "#",
+    code: "#"
+  },
+  {
+    title: "Fintech App",
+    desc: "A simple transactional website.",
+    tech: ["react", "tailwind css", "node js"],
+    live: "#", 
     code: "#"
   }
 ];
