@@ -5,6 +5,7 @@ import Services from './Component/services'
 import ProjectSection from './Component/project'
 import Skills from './Component/skill'
 import Contact from './Component/contact'
+import { ToastContainer } from 'react-toastify'
 
 export const App = () => {
   return (
@@ -15,6 +16,7 @@ export const App = () => {
   <ProjectSection/>
   <Skills/>
   <Contact/>
+  <ToastContainer/>
  </div>
   )
 }

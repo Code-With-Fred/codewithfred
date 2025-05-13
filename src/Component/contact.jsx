@@ -1,39 +1,89 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FaEnvelope, FaTwitter, FaGithub, FaLinkedin, FaMedium, FaFacebook } from 'react-icons/fa';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Contact = () => {
+  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+  const [loading, setLoading] = useState(false);
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+      });
+
+      const data = await res.json();
+
+      if (res.ok) {
+        toast.success(data.message || 'Message sent successfully!');
+        setFormData({ name: '', email: '', message: '' });
+      } else {
+        toast.error(data.message || 'Something went wrong');
+      }
+    } catch (err) {
+      toast.error('Failed to send message. Try again later.');
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <section id="contact" className="relative z-10 py-16 px-6 bg-gradient-to-b from-black to-gray-900 text-white overflow-hidden">
       <div className="max-w-4xl mx-auto text-center">
         <h2 className="text-4xl md:text-5xl font-bold mb-4">Let's Connect</h2>
         <p className="text-lg text-gray-300 mb-10">Whether it’s a project, question, or vibe, drop it below👇</p>
 
-        <form className="space-y-6">
+        <form className="space-y-6" onSubmit={handleSubmit}>
           <div className="flex flex-col md:flex-row gap-6">
             <input
               type="text"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
               placeholder="Your Name"
               className="w-full p-4 bg-gray-800 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
+              required
             />
             <input
               type="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
               placeholder="Email Address"
               className="w-full p-4 bg-gray-800 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
+              required
             />
           </div>
 
           <textarea
             rows="5"
+            name="message"
+            value={formData.message}
+            onChange={handleChange}
             placeholder="Your Message"
             className="w-full p-4 bg-gray-800 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 transition"
+            required
           ></textarea>
 
           <button
             type="submit"
+            disabled={loading}
             className="inline-flex items-center justify-center px-8 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold rounded-full hover:scale-105 transition-all duration-300"
           >
             <FaEnvelope className="mr-2" />
-            Send Message
+            {loading ? 'Sending...' : 'Send Message'}
           </button>
         </form>
 
