@@ -32,14 +32,14 @@ const projects = [
     code: "#"
   },
   {
-    title: "Fintech App",
-    desc: "A simple transactional website.",
+    title: "Working on a big project",
+    desc: "A website .",
     tech: ["react", "tailwind css", "node js"],
     live: "#",
     code: "#"
   },
   {
-    title: "Fintech App",
+    title: "Currently building e-commerce website",
     desc: "A simple transactional website.",
     tech: ["react", "tailwind css", "node js"],
     live: "#", 

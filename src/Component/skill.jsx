@@ -1,6 +1,7 @@
 import React from "react";
 import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaBootstrap, FaGitAlt, FaSass, FaFigma, FaCss3 } from "react-icons/fa";
 import { FiDownload } from "react-icons/fi";
+import { motion } from "framer-motion";
 
 const Skills = () => {
   const skills = [
@@ -13,11 +14,23 @@ const Skills = () => {
     { icon: <FaGitAlt />, title: "Git" },
     { icon: <FaSass />, title: "Tailwind" },
   ];
+  const fadeInUp = {
+    hidden: { opacity: 0, y: 60 },
+    show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
+  };
 
   return (
     <section className="p-8 md:p-16 bg-gradient-to-b from-gray-900 to-black text-white">
       <div className="max-w-6xl mx-auto text-center mb-12">
-        <h2 className="text-4xl md:text-5xl font-bold mb-4">My Skills & Tools</h2>
+      <motion.h2
+          initial="hidden"
+          whileInView="show"
+          variants={fadeInUp}
+          className="text-4xl md:text-5xl font-bold mb-4"
+        >
+          My Skills & Tools
+        </motion.h2>
+        {/* <h2 className="text-4xl md:text-5xl font-bold mb-4">My Skills & Tools</h2> */}
         <p className="text-lg text-gray-300">The tools that make the magic happen.</p>
       </div>
 
