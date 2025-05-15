@@ -33,6 +33,7 @@ const Contact = () => {
         toast.error(data.message || 'Something went wrong');
       }
     } catch (err) {
+      console.error('Submit error:', err);
       toast.error('Failed to send message. Try again later.');
     } finally {
       setLoading(false);
@@ -87,7 +88,6 @@ const Contact = () => {
           </button>
         </form>
 
-        {/* Socials */}
         <div className="mt-12 flex justify-center gap-8 text-3xl">
           <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition transform hover:-translate-y-1">
             <FaTwitter />
@@ -98,16 +98,15 @@ const Contact = () => {
           <a href="https://www.linkedin.com/in/ezefavourchimereze/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-500 transition transform hover:-translate-y-1">
             <FaLinkedin />
           </a>
-          <a href="https://www.medium.com/in/ezefavourchimereze/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-500 transition transform hover:-translate-y-1">
+          <a href="https://medium.com/@ezefavourchimereze" target="_blank" rel="noopener noreferrer" className="hover:text-blue-500 transition transform hover:-translate-y-1">
             <FaMedium />
           </a>
-          <a href="https://www.facebook.com/in/ezefavourchimereze/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-500 transition transform hover:-translate-y-1">
+          <a href="https://www.facebook.com/ezefavourchimereze/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-500 transition transform hover:-translate-y-1">
             <FaFacebook />
           </a>
         </div>
       </div>
 
-      {/* Floating Background Elements */}
       <div className="absolute -top-10 left-0 w-40 h-40 bg-indigo-600 rounded-full opacity-20 animate-ping"></div>
       <div className="absolute bottom-0 right-0 w-60 h-60 bg-blue-500 rounded-full opacity-10 animate-pulse"></div>
     </section>
